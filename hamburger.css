@@ -1,0 +1,32 @@
+/* Hamburger & Mobile Navigation */
+.nav-links {
+    display: flex;
+    gap: 20px; /* desktop spacing */
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;          
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        background-color: #1e1e2e;
+        padding: 10px;
+        border-radius: 8px;
+        gap: 10px;
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex;          
+    }
+
+    .hamburger {
+        display: block;
+        font-size: 1.5rem;
+        cursor: pointer;
+        user-select: none;
+    }
+}
