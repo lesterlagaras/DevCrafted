@@ -1,29 +1,34 @@
-// Kunin lahat ng copy buttons
 const copyButtons = document.querySelectorAll('.copy-ip-btn');
 
 copyButtons.forEach(button => {
     button.addEventListener('click', () => {
-        // Kunin ang IP mula sa data-ip attribute
         const serverIP = button.getAttribute('data-ip');
+        const copiedText = button.parentElement.querySelector('.copied-text');
 
-        // Kopyahin sa clipboard
-        navigator.clipboard.writeText(serverIP).then(() => {
-            // Gumawa ng "Copied!" text
-            let copiedText = document.createElement('span');
-            copiedText.textContent = "Copied!";
-            copiedText.classList.add('copied-text');
-            copiedText.style.display = 'block';
-            copiedText.style.marginTop = '5px';
-            copiedText.style.color = '#4ade80';
-            copiedText.style.fontSize = '0.9rem';
-
-            // Idagdag sa button parent
-            button.parentElement.appendChild(copiedText);
-
-            // Tanggalin after 2 seconds
-            setTimeout(() => {
-                copiedText.remove();
-            }, 2000);
-        });
+        // Try clipboard API
+        if (navigator.clipboard) {
+            navigator.clipboard.writeText(serverIP)
+                .then(() => {
+                    copiedText.style.display = 'block';
+                    setTimeout(() => copiedText.style.display = 'none', 2000);
+                })
+                .catch(err => {
+                    alert("Failed to copy IP: " + err);
+                });
+        } else {
+            // Fallback for old browsers
+            const textArea = document.createElement("textarea");
+            textArea.value = serverIP;
+            document.body.appendChild(textArea);
+            textArea.select();
+            try {
+                document.execCommand('copy');
+                copiedText.style.display = 'block';
+                setTimeout(() => copiedText.style.display = 'none', 2000);
+            } catch (err) {
+                alert("Failed to copy IP: " + err);
+            }
+            document.body.removeChild(textArea);
+        }
     });
 });
