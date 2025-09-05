@@ -70,15 +70,15 @@
 /* Version List */
 .version-list {
     display: none; 
-    position: relative;
-    top: 100%; 
+    position: relative;   
+    top: 100%;           
     left: 0;
     width: max-content;
     margin-top: 5px;
     padding: 10px;
     background: #2a2a3b;
     border-radius: 8px;
-    z-index: 100;
+    z-index: 1000;      
 }
 
 .version-list a {
