@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevCrafted | Plugins</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="plugins.css"> 
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">DevCrafted</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="plugins.html">Plugins</a></li>
+                <li><a href="server.html">Servers</a></li>
+                <li><a href="models.html">Models</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">☰</div>
+        </nav>
+
+        <!-- Search Bar (always visible) -->
+        <div class="search-container">
+            <input type="text" id="searchBar" placeholder="Search plugins...">
+        </div>
+    </header>
+
+    <!-- Plugins Section -->
+    <section class="featured">
+        <h2>Available Plugins</h2>
+        <div class="plugin-grid">
+
+            <!-- Plugin Card -->
+            <div class="plugin-card">
+                <h3>EconomyShopGUI</h3>
+                <p>A simple and powerful shop GUI for your server.</p>
+                <div class="plugin-actions">
+                    <a href="plugins/EconomyShopGUI-6.14.5.jar" download class="btn">Download</a>
+                    <button class="version-btn">Version</button>
+                    <div class="version-list">
+                        <a href="plugins/EconomyShopGUI-6.14.5.jar" download>v6.14.5</a>
+                        <a href="plugins/EconomyShopGUI-6.14.4.jar" download>v6.14.4</a>
+                        <a href="plugins/EconomyShopGUI-6.14.3.jar" download>v6.14.3</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="plugin-card">
+                <h3>EssentialsX</h3>
+                <p>All-in-one plugin with commands, teleportation, homes, and more.</p>
+                <div class="plugin-actions">
+                    <a href="plugins/EssentialsX-2.22.0-dev+21-e9da116.jar" download class="btn">Download</a>
+                    <button class="version-btn">Version</button>
+                    <div class="version-list">
+                        <a href="plugins/EssentialsX-2.22.0-dev+21-e9da116.jar" download>v2.22.0</a>
+                        <a href="plugins/EssentialsX-2.21.0.jar" download>v2.21.0</a>
+                        <a href="plugins/EssentialsX-2.20.5.jar" download>v2.20.5</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more plugin cards here -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 DevCrafted | Crafted with ❤️ for the Minecraft community</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="hamburger.js"></script>
+    <script src="plversion.js"></script>
+    <script src="plugins-search.js"></script>
+</body>
+</html>
