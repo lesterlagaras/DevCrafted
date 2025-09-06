@@ -172,3 +172,26 @@ footer {
         width: 100%;
     }
 }
+
+/* Search Bar - Always visible */
+.search-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+#searchBar {
+    width: 90%;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    background-color: #ffffff; /* changed to white */
+    color: #1e1e2e; /* dark text for readability */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+#searchBar::placeholder {
+    color: #666666; /* darker placeholder for contrast */
+}
