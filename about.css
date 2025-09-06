@@ -25,3 +25,28 @@
 .about strong {
     color: #4ade80; /* green highlight */
 }
+
+/* Footer Social Links */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    color: #f5f5f5;
+    margin-top: 50px;
+}
+
+footer .social-links {
+    margin-top: 10px;
+}
+
+footer .social-links a {
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 1.8rem; /* laki ng icons */
+    color: #f5f5f5;
+    transition: color 0.3s ease;
+}
+
+footer .social-links a:hover {
+    color: #ffcc00; /* highlight kapag hover */
+}
